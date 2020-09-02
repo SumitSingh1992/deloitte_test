@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/jquery-ui.js"></script>
+<script src="./assets/js/action.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- header view -->
+    <div class="header">
+      <div class="col-6 col-s-12">
+          <div class="menu-icon">
+              <i class="fa fa-bars"></i>
+              <div class="nav">
+                  <ul>
+                      <li>HOME</li>
+                      <li>SHOP</li>
+                      <li>MAGAZINE</li>
+                  </ul>
+                      </div>
+          </div>
+          
+      </div>
+  
+      <div class="col-6 col-s-12">
+  <div class="search-icon">
+      <i class="fa fa-search"></i>
+      <input type="text" id="search" class="search-input">
+      <i class="fa fa-shopping-cart"></i>
+      <span>Login</span>
+  </div>
+      </div>
+
+  </div>
+  
+  <!-- Content View for filter options / Sidebar -->
+  <div class="row">
+    <div class="col-3 col-m-4 col-s-12 menu">
+        <span>FILTER BY</span>
+      <ul>
+        <li>Collection<i class="fa fa-chevron-down" onclick="toggleList('collection-list');"></i>
+        <div class="collection-list hidden-list" style="display:none;">
+          
+        </div>
+        </li>
+        <li>Color<i class="fa fa-chevron-down" onclick="toggleList('color-list');"></i>
+          <div class="color-list hidden-list" style="display:none;">
+          
+          </div>
+        </li>
+        <li>Category<i class="fa fa-chevron-down" onclick="toggleList('category-list');"></i>
+          <div class="category-list hidden-list" style="display:none;">
+          
+          </div>
+        </li>
+        <li>Price range
+          <div class="slidecontainer">
+            <div style="padding: 15px 0px;">
+              <div id="slider-range"></div>
+            </div>
+              <span class="range-limit" id="min">$1500</span><span id="max" style="float: right;" class="range-limit">$10,000</span>
+            </div>
+            
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Content View for filtered data elements -->
+    <div class="col-9  col-m-8 col-s-12 items">
+
+      <!-- Show loading bar until data loads from API -->
+      <div class="loading">
+        <h2>Loading...</h2>
+      </div>
+    </div>
+  
+    
+  </div>
+  
+  <!-- Footer area for dynamically add pagination button -->
+  <div class="footer">
+  </div>
+
+  </div>
+
+
+</body>
+</html>
